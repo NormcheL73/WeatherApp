@@ -1,24 +1,43 @@
-import logo from './logo.svg';
 import './App.css';
+import { useEffect, useState } from 'react';
+
+
+const lat = '54.217515'
+const lon = '49.623924'
+
+const API_key = 'ab4d7fea3cfeb4f9f1800dbc62c831ec'
+
+const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&lang=ru&appid=${API_key}&units=metric`
+
 
 function App() {
+
+  const [cloudDescription, setcloudDescription] = useState('Пусто')
+
+
+  useEffect(() => {
+
+    const fetchData = async () => { 
+      const response = await fetch(url)
+
+      if (response.ok) {
+        const json = await response.json()
+        console.log("всё норм", json)
+        setcloudDescription(json.weather[0].description)
+      }
+      else {
+        console.error('не получилось')
+      }
+    }
+    fetchData()
+
+  }, [])
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <div className="App">
+   <h1>test</h1>
+    {cloudDescription}
+  </div>
   );
 }
 
