@@ -16,8 +16,6 @@
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  
-  ;
 }
 
 .currentTop #currentTop1 {
@@ -36,20 +34,76 @@
   flex-direction: column;
 }
 
-.daily text {
-  margin-bottom: 33px;
-}
-
 .daily .days {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: row;
-  gap: 105px;
+  flex-wrap: wrap;
+  margin-top: 33px;
+  gap: 103px;
   justify-content: center;
 }
 
 .daily .days #day {
   border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
   width: 160px;
   height: 168px;
 }
+
+.daily img {
+  transform: scale(0.8);
+}
+
+
+.details {
+  border: 2px solid black;
+  margin: 107px 64px 0 64px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.details .detailsUnderText {
+  display: flex;
+  flex-direction: row;
+}
+
+.details .feelsLike {
+  border: 2px solid black;
+  margin-top: 33px;
+  width: 620px;
+  height: 164px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: start;
+}
+
+.details .sunPosition {
+  border: 2px solid black;
+  margin-top: 33px;
+  width: 280px;
+  height: 164px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: start;
+}
+
+.details #feelsLikePart {
+  border: 2px solid black;
+  width: 113px;
+  height: 64px;
+  margin: 0 80px 32px 0; 
+}
+
+.details #sunPositionPart {
+  border: 2px solid black;
+  width: 150px;
+  height: 64px;
+  margin-bottom: 32px;
+}
+

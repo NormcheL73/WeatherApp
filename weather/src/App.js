@@ -126,10 +126,12 @@ function App() {
       {cloudDescription}
     </div>
     <div className = "daily">
-      <text>По дням</text>
+      По дням
       <div className = "days">
         <div id="day">
-
+        Сегодня
+        <img src={currentTempIcon}></img>
+        {currentTemp}
         </div>
         <div id="day">
 
@@ -151,9 +153,37 @@ function App() {
         </div>
       </div>
     </div>
-    <div className = "feelsLike">
-      <text>Подробности</text>
-      
+    <div className = "details">
+      Подробности
+      <div className = "detailsUnderText">
+        <div className ="feelsLike">
+          <div id="feelsLikePart">
+          
+          </div>
+          <div id="feelsLikePart">
+
+          </div>
+          <div  id="feelsLikePart">
+
+          </div>
+          <div id="feelsLikePart">
+
+          </div>
+          <div id="feelsLikePart">
+
+          </div>
+
+        </div>
+        <div className="sunPosition">
+          <div id="sunPositionPart">
+
+          </div>
+          <div id="sunPositionPart">
+
+          </div>
+
+        </div>
+      </div>  
     </div>
   </div>
   );
