@@ -1,5 +1,6 @@
 import './App.css';
 import { useEffect, useState } from 'react';
+import DailyWeather from './components/DailyWeather/DailyWeather';
 
 
 const lat = '54.217515'
@@ -7,15 +8,16 @@ const lon = '49.623924'
 
 const API_key = 'ab4d7fea3cfeb4f9f1800dbc62c831ec'
 
-//const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&lang=ru&appid=${API_key}&units=metric`
 const url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${API_key}&lang=ru&units=metric`
 
 
-function App() {
+function App(props) {
 
   const [cloudDescription, setcloudDescription] = useState('Пусто')
   const [currentTemp, setcurrentTemp] = useState('-')
   const [currentTempIcon, setcurrentTempIcon] = useState('|')
+
+  const [dailyWeather, setdailyWeather] = useState([])
 
   let date = new Date()
 
@@ -104,6 +106,7 @@ function App() {
         setcloudDescription(ucFirst(json.current.weather[0].description))
         setcurrentTemp(Math.round(json.current.temp) + '°')
         setcurrentTempIcon('http://openweathermap.org/img/wn/' + json.current.weather[0].icon + '@2x.png')
+        setdailyWeather(json.daily)
       }
       else {
         console.error('Не получилось')
@@ -125,7 +128,8 @@ function App() {
       </div>
       {cloudDescription}
     </div>
-    <div className = "daily">
+    <DailyWeather dailyWeather={dailyWeather}/>
+    {/* <div className = "daily"> 
       По дням
       <div className = "days">
         <div id="day">
@@ -152,7 +156,7 @@ function App() {
 
         </div>
       </div>
-    </div>
+  </div> */ }
     <div className = "details">
       Подробности
       <div className = "detailsUnderText">
@@ -186,7 +190,7 @@ function App() {
       </div>  
     </div>
   </div>
-  );
+  )
 }
 
 export default App;

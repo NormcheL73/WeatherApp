@@ -1,0 +1,64 @@
+.DayWeather_title {
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: left;
+    padding-bottom: 19px;
+}
+
+.DayWeather_info {
+    display: flex;
+    flex-direction: column;
+}
+
+.DayWeather {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 160px;
+    height: 168px;
+    margin-right: 48px;
+    padding: 16px;
+}
+
+.DayWeather:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 16px;
+}
+
+.DayWeather_temp {
+    display: flex;
+    flex-direction: row;
+}
+
+.Day_temp {
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+.Night_temp {
+    display: flex;
+    align-items: flex-end;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: left;
+    opacity: 0.5;
+    padding-left: 16px;
+}
+
+.DayWeather img {
+    width: 72px;
+    height: 72px;
+    padding-bottom: 19px;
+}
+

@@ -9,7 +9,7 @@ body {
 }
 
 #root {
-  height:inherit;
+  height: inherit;
 }
 
 
@@ -17,4 +17,8 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+* {
+  color: white;
 }
