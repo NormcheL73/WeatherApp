@@ -11,11 +11,18 @@
 
 .currentTop {
   margin: 64px 0 81px 0;
-  border: 2px solid black;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
+}
+
+.currentTop_city {
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 47px;
+  letter-spacing: 0px;
+  text-align: left;
 }
 
 .currentTop #currentTop1 {
@@ -25,85 +32,24 @@
   flex-direction: row;
 }
 
-.daily {
-  border: 2px solid black;
-  margin: 0 64px 0 64px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  flex-direction: column;
+.currentTop img {
+  width: 125px;
 }
 
-.daily .days {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin-top: 33px;
-  gap: 103px;
-  justify-content: center;
+.currentTop_description {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 31px;
+  letter-spacing: 0px;
+  text-align: left;
 }
 
-.daily .days #day {
-  border: 2px solid black;
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: flex-start;
-  width: 160px;
-  height: 168px;
-}
-
-.daily img {
-  transform: scale(0.8);
-}
-
-
-.details {
-  border: 2px solid black;
-  margin: 107px 64px 0 64px;
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-}
-
-.details .detailsUnderText {
-  display: flex;
-  flex-direction: row;
-}
-
-.details .feelsLike {
-  border: 2px solid black;
-  margin-top: 33px;
-  width: 620px;
-  height: 164px;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: start;
-}
-
-.details .sunPosition {
-  border: 2px solid black;
-  margin-top: 33px;
-  width: 280px;
-  height: 164px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: start;
-}
-
-.details #feelsLikePart {
-  border: 2px solid black;
-  width: 113px;
-  height: 64px;
-  margin: 0 80px 32px 0; 
-}
-
-.details #sunPositionPart {
-  border: 2px solid black;
-  width: 150px;
-  height: 64px;
-  margin-bottom: 32px;
+.currentTemp {
+  font-size: 96px;
+  font-weight: 300;
+  line-height: 125px;
+  letter-spacing: 0px;
+  text-align: left;
+  padding-left: 15px;
 }
 

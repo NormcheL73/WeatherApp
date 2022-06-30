@@ -10,7 +10,7 @@ function DailyWeather({dailyWeather}) {
 
     return (
       <div className="DailyWeather">
-        <h2 className='DailyWeather_title'>По дням</h2>
+        <span className='DailyWeather_title'>По дням</span>
         <div className='DayWeatherList'>
             {dailyWeather.map((day) => {
                 return <DayWeather 
@@ -18,8 +18,7 @@ function DailyWeather({dailyWeather}) {
                             tempDay={day.temp.day} 
                             tempNight={day.temp.night} 
                             dt={day.dt}
-                            icon={day.weather[0].icon}
-                            test={day.weather} />
+                            icon={day.weather[0].icon} />
             })}
         </div>
       </div>
@@ -27,19 +26,3 @@ function DailyWeather({dailyWeather}) {
 }
 
 export default DailyWeather;
-
-/*{
-    "dt": 1656403200, // Дата
-    "temp": {
-        "day": 16.99,
-        "night": 9.05,
-    },
-    "weather": [
-        {
-            "icon": "01d"
-        }
-    ],
-    daily[0].weather[0].icon
-    <img src={currentTempIcon}></img>
-    'http://openweathermap.org/img/wn/' + json.current.weather[0].icon + '@2x.png'
-} */
