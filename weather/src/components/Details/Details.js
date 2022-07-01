@@ -1,5 +1,8 @@
 import React from 'react';
 import './index.css';
+import { ReactComponent as SunriseSvg } from './sunrise.svg';
+import { ReactComponent as SunsetSvg } from './sunset.svg';
+import { ReactComponent as WindSvg } from './wind.svg';
 
 function Details({details}) {
 
@@ -7,7 +10,7 @@ function Details({details}) {
     const humidity = details.humidity + '%'
     const visibility = (details.visibility / 1000) + ' км'
     const pressure =  ((details.pressure * 0.750064).toFixed(2)) + ' мм'
-    const wind = Math.round(details.wind_speed) + ' м/с'
+    const wind = ' ' + Math.round(details.wind_speed) + ' м/с'
 
     let sunriseDate = new Date(details.sunrise * 1000)
     let sunDateRise = sunriseDate.getHours() + ':' + sunriseDate.getMinutes()
@@ -42,17 +45,23 @@ function Details({details}) {
             </div>
             <div id="feelsLikePart">
             <span className='feelsLikePart_title'>Ветер</span>
-            <span className='feelsLikePart_info'>{wind}</span>
+            <span className='feelsLikePart_info'><WindSvg />{wind}</span>
             </div>
           </div>
           <div className="sunPosition">
             <div id="sunPositionPart">
             <span className='sunPosition_title'>Восход</span>
-            <span className='sunPosition_info'>{sunDateRise}</span>
+            <div className='sunPosition_info'>
+              <SunriseSvg />
+              <span className='sunPosition_time'>{sunDateRise}</span>
+            </div>
             </div>
             <div id="sunPositionPart">
             <span className='sunPosition_title'>Закат</span>
-            <span className='sunPosition_info'>{sunDateSet}</span>
+            <div className='sunPosition_info'>
+              <SunsetSvg />
+              <span className='sunPosition_time'>{sunDateSet}</span>
+            </div>
             </div>
           </div>
         </div>  
@@ -61,29 +70,3 @@ function Details({details}) {
 }
 
 export default Details;
-
-/*
-{
-    "dt": 1656604361,
-    "sunrise": 1656547882,
-    "sunset": 1656609514,
-    "temp": 15.66,
-    "feels_like": 15.08,
-    "pressure": 1009,
-    "humidity": 69,
-    "dew_point": 10,
-    "uvi": 0.15,
-    "clouds": 63,
-    "visibility": 10000,
-    "wind_speed": 2.62,
-    "wind_deg": 323,
-    "wind_gust": 5.48,
-    "weather": [
-        {
-            "id": 803,
-            "main": "Clouds",
-            "description": "облачно с прояснениями",
-            "icon": "04d"
-        }
-    ]
-} */

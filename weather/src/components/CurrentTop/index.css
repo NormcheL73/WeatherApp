@@ -1,0 +1,43 @@
+.currentTop {
+    margin: 64px 0 81px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .currentTop_city {
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 47px;
+    letter-spacing: 0px;
+    text-align: left;
+  }
+  
+  .currentTop #currentTop1 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+  }
+  
+  .currentTop img {
+    width: 125px;
+  }
+  
+  .currentTop_description {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 31px;
+    letter-spacing: 0px;
+    text-align: left;
+  }
+  
+  .currentTemp {
+    font-size: 96px;
+    font-weight: 300;
+    line-height: 125px;
+    letter-spacing: 0px;
+    text-align: left;
+    padding-left: 15px;
+  }

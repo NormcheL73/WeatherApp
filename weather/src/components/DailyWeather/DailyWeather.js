@@ -3,7 +3,9 @@ import DayWeather from '../DayWeather/DayWeather';
 import './index.css';
 
 function DailyWeather({dailyWeather}) {
+  
     const firstDay = dailyWeather[0]
+    
     if (firstDay === undefined) {
         return null
     }
