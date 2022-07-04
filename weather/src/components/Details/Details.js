@@ -1,6 +1,6 @@
 import React from 'react';
 import './index.css';
-import { ReactComponent as SunriseSvg } from './sunrise.svg';
+import { ReactComponent as SunriseSvg } from './sunrise.svg'; // icons в папку imges/icons
 import { ReactComponent as SunsetSvg } from './sunset.svg';
 import { ReactComponent as WindSvg } from './wind.svg';
 
@@ -12,7 +12,7 @@ function Details({details}) {
     const pressure =  ((details.pressure * 0.750064).toFixed(2)) + ' мм'
     const wind = ' ' + Math.round(details.wind_speed) + ' м/с'
 
-    let sunriseDate = new Date(details.sunrise * 1000)
+    let sunriseDate = new Date(details.sunrise * 1000) // неизменяемые переменные const
     let sunDateRise = sunriseDate.getHours() + ':' + sunriseDate.getMinutes()
 
     let sunsetDate = new Date(details.sunset * 1000)

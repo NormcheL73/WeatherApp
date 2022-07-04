@@ -8,7 +8,20 @@ function DayWeather({tempDay, tempNight, dt, icon}) {
   let toDay = `${myDate.getDate()}.${myDate.getMonth() + 1}.${myDate.getFullYear()}`
   let dayName = myDate.getDay()
 
-  const correctIcon = `http://openweathermap.org/img/wn/${icon}@2x.png`
+  const correctIcon = `http://openweathermap.org/img/wn/${icon}@2x.png` // srcIcon
+
+  // Вместо свчиа лучше сделать это через словарь 
+  // const dayOfWeekDictionary = {
+  //   0: 'Вс',
+  //   1: 'Пн',
+  //   2: 'Вт',
+  //   3: 'Ср',
+  //   4: 'Чт',
+  //   5: 'Пт',
+  //   6: 'Сб',
+  // }
+  // dayName = dayOfWeekDictionary[dayName]
+
 
   switch (dayName) {
     case 0:
@@ -34,12 +47,12 @@ function DayWeather({tempDay, tempNight, dt, icon}) {
       break;   
   }
 
-
-  if (checkDate.getDate() == myDate.getDate()) {
+  // Лучше везде использовать строгое сравнение ===
+  if (checkDate.getDate() == myDate.getDate()) { // Лучше в функцию
     toDay = 'Сегодня'
   }
 
-  if ((checkDate.getDate() + 1 == myDate.getDate()) || 
+  if ((checkDate.getDate() + 1 == myDate.getDate()) ||  // Лучше в функцию
       (checkDate.getDate() == 30 && (checkDate.getMonth()+1) % 2 == 0 && myDate.getDate() == 1) ||
       (checkDate.getDate() == 31 && myDate.getDate() == 1)) {
     toDay = 'Завтра'

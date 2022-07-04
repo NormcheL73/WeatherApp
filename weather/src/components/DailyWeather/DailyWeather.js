@@ -6,8 +6,10 @@ function DailyWeather({dailyWeather}) {
   
     const firstDay = dailyWeather[0]
     
+     // Лучше делать проверку по длине массива 
+     // if (dailyWeather.length) {
     if (firstDay === undefined) {
-        return null
+        return null 
     }
 
     return (
