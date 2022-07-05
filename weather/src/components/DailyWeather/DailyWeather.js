@@ -4,9 +4,8 @@ import './index.css';
 
 function DailyWeather({dailyWeather}) {
   
-    const firstDay = dailyWeather[0]
     
-    if (firstDay === undefined) {
+    if (!dailyWeather.length) {
         return null
     }
 

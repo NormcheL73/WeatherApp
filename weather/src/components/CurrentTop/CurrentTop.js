@@ -18,7 +18,7 @@ function CurrentTop({details}) {
 
     return (
         <div className = "currentTop">
-        <span className="currentTop_city">Димитровград</span>
+         <span className="currentTop_city">Димитровград</span>
         <div id="currentTop1">
         <img src={currentTempIcon}></img>
           <span className="currentTemp">{currentTemp}</span>
